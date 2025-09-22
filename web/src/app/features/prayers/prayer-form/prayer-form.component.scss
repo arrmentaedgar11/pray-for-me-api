@@ -1,0 +1,7 @@
+.page { padding: 1rem; max-width: 520px; }
+.field { margin: .75rem 0; display: flex; flex-direction: column; }
+.field.checkbox { flex-direction: row; gap: .5rem; align-items: center; }
+input[type="text"] { padding: .5rem; border: 1px solid #bbb; border-radius: 4px; }
+button { margin-top: 1rem; padding: .5rem .9rem; }
+.error { color: #b00020; margin-top: .25rem; }
+.hint { opacity: .7; }

@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <div class="nav-inner">
+    <a class="brand" routerLink="/">Pray For Me</a>
+    <ul class="links">
+      <li><a routerLink="/prayers" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Prayers</a></li>
+      <li><a routerLink="/prayers/new" routerLinkActive="active">Create</a></li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

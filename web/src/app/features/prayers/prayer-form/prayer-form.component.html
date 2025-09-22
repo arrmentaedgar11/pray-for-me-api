@@ -1,0 +1,26 @@
+<section class="page">
+  <h1>Create Prayer</h1>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <div class="field">
+      <label for="title">Title</label>
+      <input id="title" type="text" formControlName="title" />
+      <small class="hint">Max 120 characters.</small>
+      <div class="error" *ngIf="form.controls.title.touched && form.controls.title.invalid">
+        <span *ngIf="form.controls.title.errors?.['required']">Title is required.</span>
+        <span *ngIf="form.controls.title.errors?.['maxlength']">Too long.</span>
+      </div>
+    </div>
+
+    <div class="field checkbox">
+      <label>
+        <input type="checkbox" formControlName="is_private" />
+        Private prayer?
+      </label>
+    </div>
+
+    <div class="error" *ngIf="error">{{ error }}</div>
+
+    <button type="submit" [disabled]="saving">Create</button>
+  </form>
+</section>

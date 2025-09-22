@@ -1,0 +1,16 @@
+<section class="page">
+  <a routerLink="/prayers">← Back</a>
+
+  <h1>{{ prayer.title }}</h1>
+  <p>{{ prayer.description }}</p>
+
+  <div class="meta">
+    <span>Status: {{ prayer.status }}</span>
+    <span>Prayed: {{ prayer.prayed_count }}</span>
+  </div>
+
+  <div class="actions">
+    <button (click)="pray()">I prayed</button>
+    <a [routerLink]="['/prayers', prayer.id, 'comments']">View comments</a>
+  </div>
+</section>

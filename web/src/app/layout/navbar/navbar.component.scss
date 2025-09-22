@@ -1,0 +1,16 @@
+.navbar {
+  background: #111827;
+  color: #fff;
+  .nav-inner {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand { color: #fff; text-decoration: none; font-weight: 600; }
+  .links { list-style: none; display: flex; gap: 1rem; margin: 0; }
+  .links a { color: #9ca3af; text-decoration: none; }
+  .links a.active { color: #fff; }
+}

@@ -1,0 +1,16 @@
+<section class="page">
+  <h1>Comments (Prayer #{{ prayerId }})</h1>
+
+  <ul class="list">
+    <li *ngFor="let c of items">
+      <div class="content">
+        <strong>{{ c.display_name }}</strong>
+        <p>{{ c.content }}</p>
+      </div>
+      <div class="actions">
+        <button (click)="like(c)">👍 {{ c.likes_count }}</button>
+        <button (click)="remove(c)">🗑️</button>
+      </div>
+    </li>
+  </ul>
+</section>
