@@ -1,0 +1,22 @@
+<section class="page">
+  <h1>Prayers</h1>
+
+  <p *ngIf="error" style="color:#b00">{{ error }}</p>
+
+  <ul *ngIf="items.length; else empty">
+    <li *ngFor="let p of items">
+      <a [routerLink]="['/prayers', p.id]">
+        <strong>#{{ p.id }}</strong> — {{ p.title }}
+      </a>
+      <small>
+        (status: {{ p.is_closed ? 'closed' : 'open' }}, prayed: {{ p.prayed_count ?? 0 }})
+      </small>
+    </li>
+  </ul>
+
+  <ng-template #empty>
+    <p>No prayers yet.</p>
+  </ng-template>
+
+  <p>Total: {{ total }}</p>
+</section>
